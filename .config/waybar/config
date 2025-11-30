@@ -1,0 +1,50 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin": "5px 5px 0 5px",
+    "modules-left": [
+        "custom/launcher",
+        "niri/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "cpu",
+        "memory",
+        "network",
+        "custom/power"
+    ],
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true
+    },
+    "memory": {
+        "format": "  {percentage}%",
+        "tooltip": true
+    },
+    "clock": {
+        "interval": 60,
+        "format": "{:%F (%a) %p %I:%M}",
+        "tooltip": false
+    },
+    "network": {
+        "interface": "ens33",
+        "format": " {bandwidthUpBits}  {bandwidthDownBits}",
+        "tooltip-format": "{ifname}\n{ipaddr}\n{netmask}"
+    },
+    "niri/workspaces": {
+        "format": ""
+    },
+    "custom/launcher": {
+        "format": " 󰣇 ",
+        "tooltip": false,
+        "on-click": "fuzzel"
+    },
+    "custom/power": {
+        "format": " 󰐥 ",
+        "tooltip": false,
+        "on-click": "wlogout -b 2 -L 400 -T 200 -B 200 -R 400 -r 20 -c 20"
+    }
+}
