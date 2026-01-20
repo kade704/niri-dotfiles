@@ -15,6 +15,8 @@ button {
     background-position: center;
     background-size: 16%;
 
+    margin: 10px;
+
     border: 3px solid #FFFFFF;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -26,6 +28,16 @@ button:hover {
 #lock {
     border-radius: 20px;
     background-image: image(url("icons/lock.png"));
+}
+
+#hibernate {
+    border-radius: 20px;
+    background-image: image(url("icons/hibernate.png"));
+}
+
+#logout {
+    border-radius: 20px;
+    background-image: image(url("icons/logout.png"));
 }
 
 #suspend {
