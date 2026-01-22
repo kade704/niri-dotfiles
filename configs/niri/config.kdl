@@ -1,0 +1,16 @@
+include "environments.kdl"
+include "input.kdl"
+include "display.kdl"
+include "layout.kdl"
+include "keybinds.kdl"
+include "windowrule.kdl"
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+gestures {
+    hot-corners {
+        off
+    }
+}

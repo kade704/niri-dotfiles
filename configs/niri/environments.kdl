@@ -3,4 +3,5 @@ environment {
     GTK_IM_MODULE "fcitx"
     SDL_IM_MODULE "fcitx"
     XMODIFIERS "@im=fcitx"
+    XDG_CURRENT_DESKTOP "GNOME"
 }

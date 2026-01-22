@@ -1,0 +1,11 @@
+max-visible=10
+layer=top
+font=Pretendard Variable 12
+background-color=#555555dd
+text-color=#ffffffff
+border-color=#ffffffff
+border-radius=7
+max-icon-size=48
+default-timeout=10000
+anchor=top-right
+margin=10

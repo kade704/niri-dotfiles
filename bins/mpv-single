@@ -1,0 +1,25 @@
+#!/bin/bash
+
+SOCKET="/tmp/mpv_socket"
+
+if [ -z "$1" ]; then
+    if [ -S "$SOCKET" ]; then
+        echo "mpv is already running."
+    else
+        mpv --idle --input-ipc-server="$SOCKET"
+    fi
+    exit 0
+fi
+
+TARGET_FILE=$(realpath "$1")
+
+if [ -S "$SOCKET" ]; then
+    echo '{ "command": ["loadfile", "'"${TARGET_FILE}"'", "replace"] }' | socat - "$SOCKET" 2>/dev/null
+    
+    if [ $? -ne 0 ]; then
+        rm "$SOCKET"
+        mpv --input-ipc-server="$SOCKET" "$TARGET_FILE"
+    fi
+else
+    mpv --input-ipc-server="$SOCKET" "$TARGET_FILE"
+fi
