@@ -14,6 +14,7 @@ PACKAGES=(
     "noto-fonts"
     "noto-fonts-cjk"
     "ttf-noto-nerd"
+    "eza"
     "fish"
     "foot"
     "fuzzel"
@@ -31,3 +32,5 @@ PACKAGES=(
 yay -Syu "${PACKAGES[@]}"
 
 sudo systemctl enable sddm.service
+
+chsh -s $(which fish)
