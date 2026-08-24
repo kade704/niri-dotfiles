@@ -1,7 +1,16 @@
 #!/bin/bash
 
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+
+cd yay
+makepkg -si
+
+cd ..
+
 PACKAGES=(
     "niri"
+    "sddm"
     "fish"
     "foot"
     "fuzzel"
@@ -16,4 +25,6 @@ PACKAGES=(
     "wlsunset"
 )
 
-sudo pacman -Syu "${PACKAGES[@]}"
+yay -Syu "${PACKAGES[@]}"
+
+sudo systemctl enable sddm.service
