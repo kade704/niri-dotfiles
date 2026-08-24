@@ -11,6 +11,9 @@ cd ..
 PACKAGES=(
     "niri"
     "sddm"
+    "noto-fonts"
+    "noto-fonts-cjk"
+    "ttf-noto-nerd"
     "fish"
     "foot"
     "fuzzel"
