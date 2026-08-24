@@ -1,6 +1,6 @@
 clock
 ignore-empty-password
-font=Pretendard Variable
+font=Noto Sans
 timestr=%R
 datestr=%x
 fade-in=1
