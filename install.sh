@@ -110,7 +110,7 @@ SERVICES=(
 )
 
 for SERVICE in "${SERVICES[@]}"; do
-    systemctl --user enable "$SERVICE.service" || true
+    systemctl --user add-wants niri.service $SERVICE.service || true
 done
 success "Services configured."
 
