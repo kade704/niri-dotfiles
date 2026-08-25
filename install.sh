@@ -84,13 +84,14 @@ TMP_THEME_DIR=$(mktemp -d)
 
 info "Installing GTK & Icon themes..."
 git clone https://github.com/vinceliuice/Graphite-gtk-theme.git "$TMP_THEME_DIR/Graphite-gtk-theme"
-sudo "$TMP_THEME_DIR/Graphite-gtk-theme/install.sh" --gdm --color dark
+sudo "$TMP_THEME_DIR/Graphite-gtk-theme/install.sh" --gdm
+"$TMP_THEME_DIR/Graphite-gtk-theme/install.sh" --color dark
 
 git clone https://github.com/vinceliuice/Tela-circle-icon-theme.git "$TMP_THEME_DIR/Tela-circle-icon-theme"
 "$TMP_THEME_DIR/Tela-circle-icon-theme/install.sh" black
 
 git clone https://github.com/vinceliuice/Graphite-cursors.git "$TMP_THEME_DIR/Graphite-cursors"
-"$TMP_THEME_DIR/Graphite-cursors/install.sh"
+echo '2' | "$TMP_THEME_DIR/Graphite-cursors/install.sh"
 
 rm -rf "$TMP_THEME_DIR"
 success "Dotfiles and themes installed."
